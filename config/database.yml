@@ -48,7 +48,17 @@ test:
   password: thisisapassword
 
 
-# As with config/secrets.yml, you never want to store sensitive information,
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: d87qjtnn18v315
+  pool: 5
+  username: axzghilmtuirxg
+  password: 5a2882d7752d60e63fa27ba6ead13bcd719bc0f57520216e67584102dc7e917a
+  url: postgres://axzghilmtuirxg:5a2882d7752d60e63fa27ba6ead13bcd719bc0f57520216e67584102dc7e917a@ec2-50-16-196-238.compute-1.amazonaws.com:5432/d87qjtnn18v315
+ 
+ # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
 #
@@ -67,11 +77,9 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: d87qjtnn18v315
-  username: axzghilmtuirxg
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'] %>
-
- 
+#production:
+#  <<: *default
+#  database: d87qjtnn18v315
+#  username: axzghilmtuirxg
+#  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+#  url: <%= ENV['DATABASE_URL'] %>

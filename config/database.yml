@@ -1,3 +1,9 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
 # PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
@@ -73,7 +79,7 @@ production:
   <<: *default
   url:  <%= ENV['DATABASE_URL'] %>
   pool: <%= ENV['DB_POOL'] || ENV['RAILS_MAX_THREADS'] || 5 %>
-  
+
 #production:
 #  <<: *default
 #  database: d87qjtnn18v315
